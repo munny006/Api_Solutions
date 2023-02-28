@@ -5,20 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHuB Users</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
 
     <div class="diction-container text-center py-4 my-5">
-        <input id="input-value" type="text" value="hello">
+        <input id="input-value" type="text">
         <button id="search-btn" onclick="handleSearch()" class="btn btn-danger">Search</button>
+        <!-- <button id="button">Play</button> -->
 
     </div>
     <div class="audio-container" id="audio-container">
-
-
     </div>
+    <section class="github">
+        <button  class="btn btn-info text-center button" id="github-btn" onclick="loadGithubUsers()">Load GitHub Users</button>
+    </section>
 
     <script src="app.js"></script>
     
