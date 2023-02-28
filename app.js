@@ -21,7 +21,15 @@ const displayResult = (data) => {
    data[0].phonetics.forEach((element)=>{
     const audio = document.createElement('audio');
     audio.src = element.audio;
-    console.log(audio);
+    const button = document.createElement("button");
+    button.innerHTML = "Play";
+    button.onclick = () =>{
+        audio.play();
+    };
+    const container = document.createElement("div");
+    container.appendChild(button);
+    container.appendChild(audio);
+       
     parent.appendChild(audio);
    });
   
