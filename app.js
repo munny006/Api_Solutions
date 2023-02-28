@@ -39,6 +39,17 @@ const handleSearch = () => {
     fetch("https://api.github.com/users?per_page=10")
     .then((res) => res.json())
     .then((result) => {
-      console.log(result);
+      displayUser(result);
+    });
+  };
+  
+  const displayUser = (data) =>{
+    const parent = document.getElementById('user-container');
+    data.forEach(user =>{
+      fetch(user.followers_url)
+    .then(res =>res.json())
+    .then(data=>{
+      console.log(data);
+    });
     });
   };
