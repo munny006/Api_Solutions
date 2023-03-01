@@ -49,7 +49,17 @@ const handleSearch = () => {
       fetch(user.followers_url)
     .then(res =>res.json())
     .then(data=>{
-      console.log(data);
+     const div = document.createElement("div");
+     div.classList.add("card")
+     div.innerHTML = `
+     <img src="${user.avatar_url}" class="card-img">
+     <h4>${user.login}</h4>
+     <div>Followers : </div>
+     <img src="${data[0].avatar_url}" class="card-imgf">
+     <img src="${data[1].avatar_url}" class="card-imgfg">
+     `;
+     parent.appendChild(div);
+
     });
     });
   };
